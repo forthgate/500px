@@ -7,9 +7,9 @@ Script for 500px account promotion (auto-like)
   This script helps to promote account on 500px.com. When script will run it open page with fresh photos and start like every picture. When 20 pics will be liked page will refresh and script start from beginning. For statistic i put counter for every liked pic.
 
 ## Dependcies:
-Must be installed packages 'xvfb', 'xserver-xephyr' (for virtual display);
-Python modules: 'selenium', 'pyvirtualdisplay';
+Must be installed packages `xvfb, `xserver-xephyr` (for virtual display);
+Python modules: `selenium`, `pyvirtualdisplay`;
 Chromedriver (it should be located in the same directory with script)
 
 To run script:
-'python 500'
+`python 500`
