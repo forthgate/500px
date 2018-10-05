@@ -12,3 +12,6 @@ Python modules: `selenium`, `pyvirtualdisplay`;
 
 To run script:
 `python 500`
+
+____________________________________________________________________________________________________________________________
+This script was tested on Debian/CentOS. In future this script will be compiled for Windows
