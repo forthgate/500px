@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 ####################################################################################
 ##                                                                                ##
@@ -47,6 +47,7 @@ def main ():
 		while i <20:
 			time.sleep(3)
 			driver.find_element_by_xpath('//*[@id="copyrightTooltipContainer"]/div[1]/div[1]').click()
+			time.sleep(3)
 			driver.find_element_by_xpath('//*[@id="modal_content"]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/div/div').click()
 			time.sleep(1)
 			i=i+1

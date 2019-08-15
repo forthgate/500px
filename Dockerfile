@@ -6,5 +6,4 @@ COPY chromedriver ./
 RUN chmod +x ./chromedriver
 COPY 500.py ./
 RUN pip3 install -r requirements.txt
-COPY start.sh ./
 CMD ["python", "500.py"]
