@@ -13,6 +13,12 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 import time
 import os
+# from pyvirtualdisplay import Display
+#
+#
+#
+# display = Display(visible=1, size=(800, 600))
+# display.start()
 
 user = os.environ["USER"]
 password = os.environ["PASSWORD"]
@@ -44,25 +50,22 @@ def main ():
         time.sleep(3)
         count=0
         while True:
-                try:
                         i=0
-                        while i <20:
+                        while i <2:
                                 time.sleep(2)
-                                driver.find_element_by_xpath('//*[@id="copyrightTooltipContainer"]/div[1]/div[1]').click()
+                                driver.find_element_by_xpath('//*[@id="copyrightTooltipContainer"]/div/div[1]/div').click()
                                 time.sleep(2)
-                                url=driver.find_element_by_xpath('//*[@id="modal_content"]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/div/div')
-                                url.click()
+                                driver.find_element_by_xpath('//*[@id="modal_content"]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/div/div').click()
                                 href=driver.current_url
                                 i=i+1
                                 count=count+1
                                 print (count,  href)
-                except:
+                        else:
                                 driver.get('https://500px.com/fresh')
                                 time.sleep(5)
                                 driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div[3]/div/div[1]/div/div/div[1]/a').click()
                                 time.sleep (2)
                                 driver.find_element_by_xpath('//*[@id="modal_content"]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/div/div').click()
-                                time.sleep(7)
+                                time.sleep(2)
                                 i=0
-                                continue
 main ()
