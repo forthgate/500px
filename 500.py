@@ -50,16 +50,18 @@ def main ():
                                 time.sleep(2)
                                 driver.find_element_by_xpath('//*[@id="copyrightTooltipContainer"]/div[1]/div[1]').click()
                                 time.sleep(2)
-                                driver.find_element_by_xpath('//*[@id="modal_content"]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/div/div').click()
+                                url=driver.find_element_by_xpath('//*[@id="modal_content"]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/div/div')
+                                url.click()
+                                href=driver.current_url
                                 i=i+1
                                 count=count+1
-                                print (count)
+                                print (count,  href)
                 except:
                                 driver.get('https://500px.com/fresh')
                                 time.sleep(5)
-                                driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div[3]/div/div[1]/div/div/div[1]/a').click() #select first photo in fresh again
+                                driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div[3]/div/div[1]/div/div/div[1]/a').click()
                                 time.sleep (2)
-                                driver.find_element_by_xpath('//*[@id="modal_content"]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/div/div').click() #click like button first time
+                                driver.find_element_by_xpath('//*[@id="modal_content"]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/div/div').click()
                                 time.sleep(7)
                                 i=0
                                 continue
