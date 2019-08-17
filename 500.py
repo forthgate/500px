@@ -13,20 +13,20 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 import time
 import os
-# from pyvirtualdisplay import Display
-#
-#
-#
-# display = Display(visible=1, size=(800, 600))
-# display.start()
+from pyvirtualdisplay import Display
+
+
+
+display = Display(visible=1, size=(800, 600))
+display.start()
 
 user = os.environ["USER"]
 password = os.environ["PASSWORD"]
 options = Options()
-options.add_argument('--headless')
-options.add_argument('--disable-gpu')
-options.add_argument('--disable-dev-shm-usage')
-options.add_argument('--no-sandbox')
+# options.add_argument('--headless')
+# options.add_argument('--disable-gpu')
+# options.add_argument('--disable-dev-shm-usage')
+# options.add_argument('--no-sandbox')
 driver = webdriver.Chrome (executable_path='./webdriver/chromedriver', options=options)
 
 
@@ -73,6 +73,7 @@ def main ():
                                 i=i+1
                                 count=count+1
                                 print (count,  href)
+                                time.sleep(1)
                         else:
                                 driver.get('https://500px.com/fresh')
                                 time.sleep(10)
