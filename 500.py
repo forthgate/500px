@@ -18,7 +18,7 @@ import os
 #
 #
 # display = Display(visible=1, size=(800, 600))
-# display.start()
+#display.start()
 
 user = os.environ["USER"]
 password = os.environ["PASSWORD"]
@@ -73,6 +73,7 @@ def main ():
                                 i=i+1
                                 count=count+1
                                 print (count,  href)
+                                time.sleep(1)
                         else:
                                 driver.get('https://500px.com/fresh')
                                 time.sleep(10)
