@@ -3,5 +3,9 @@
 export USER=''
 export PASSWORD=''
 
-pip install -r requirements.txt
-python3 500.py
+pip3 install -r requirements.txt
+
+while true
+do python3 500.py
+done;
+
