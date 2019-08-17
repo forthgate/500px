@@ -13,20 +13,20 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 import time
 import os
-from pyvirtualdisplay import Display
-
-
-
-display = Display(visible=1, size=(800, 600))
+# from pyvirtualdisplay import Display
+#
+#
+#
+# display = Display(visible=1, size=(800, 600))
 display.start()
 
 user = os.environ["USER"]
 password = os.environ["PASSWORD"]
 options = Options()
-# options.add_argument('--headless')
-# options.add_argument('--disable-gpu')
-# options.add_argument('--disable-dev-shm-usage')
-# options.add_argument('--no-sandbox')
+options.add_argument('--headless')
+options.add_argument('--disable-gpu')
+options.add_argument('--disable-dev-shm-usage')
+options.add_argument('--no-sandbox')
 driver = webdriver.Chrome (executable_path='./webdriver/chromedriver', options=options)
 
 
