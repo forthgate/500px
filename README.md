@@ -35,6 +35,7 @@ docker run --env-file .env -d 500px-promote
 ```
 
 ## Bugs
-Sometime chromedriver can't  correctly open webpage with fresh photos and script can get exception error, in this case just restart the script.
+Sometime chromedriver can't  correctly open webpage and script can get exception error, in this case just restart the script.
+
 ____________________________________________________________________________________________________________________________
 This script was tested on Debian/CentOS/Arch. 
