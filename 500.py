@@ -20,8 +20,6 @@ import os
 # display = Display(visible=1, size=(800, 600))
 # display.start()
 
-
-
 user = os.environ["USER"]
 password = os.environ["PASSWORD"]
 options = Options()
@@ -44,16 +42,19 @@ def login ():
 login ()
 
 def main ():
-        ### Define xpath for click button and first photo ###
+        ### Define xpaths for buttons.
+        first='//*[@id="content"]/div/div[1]/div[3]/div/div[1]/div/div/div[1]/a'
+        like='//*[@id="modal_content"]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/div/div'
+        xpf='//*[@id="copyrightTooltipContainer"]/div/div[2]'
+        xpn='//*[@id="copyrightTooltipContainer"]/div/div[1]/div'
+
         driver.get('https://500px.com/fresh')
         time.sleep(5)
         ### Select first photo from fresh ###
-        first = driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div[3]/div/div[1]/div/div/div[1]/a')
-        first.click()
+        driver.find_element_by_xpath(first).click()
         time.sleep(5)
         ### Click like button ###
-        like = driver.find_element_by_xpath('//*[@id="modal_content"]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/div/div')
-        like.click()
+        driver.find_element_by_xpath(like).click()
         time.sleep(3)
         count=0
         while True:
@@ -62,14 +63,13 @@ def main ():
                                 time.sleep(2)
                                 ### Go to next photo. After first like xpath of will be changed ###
                                 if i >= 1:
-                                    next=driver.find_element_by_xpath('//*[@id="copyrightTooltipContainer"]/div/div[2]')
+                                    next=driver.find_element_by_xpath(xpf)
                                 else:
-                                    next=driver.find_element_by_xpath('//*[@id="copyrightTooltipContainer"]/div/div[1]/div')
+                                    next=driver.find_element_by_xpath(xpn)
                                 next.click()
                                 time.sleep(2)
                                 ###  Click like button ###
-                                like = driver.find_element_by_xpath('//*[@id="modal_content"]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/div/div')
-                                like.click()
+                                driver.find_element_by_xpath(like).click()
                                 href=driver.current_url
                                 i=i+1
                                 count=count+1
@@ -78,12 +78,10 @@ def main ():
                                 driver.get('https://500px.com/fresh')
                                 time.sleep(10)
                                 ### Select first photo from fresh ###
-                                first = driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div[3]/div/div[1]/div/div/div[1]/a')
-                                first.click()
+                                driver.find_element_by_xpath(first).click()
                                 time.sleep (2)
                                 ### Click like button ###
-                                like = driver.find_element_by_xpath('//*[@id="modal_content"]/div/div/div[2]/div/div[2]/div[1]/div[1]/div/div/div')
-                                like.click()
+                                driver.find_element_by_xpath(like).click()
                                 time.sleep(2)
                                 i=0
 
