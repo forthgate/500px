@@ -18,7 +18,7 @@ import os
 #
 #
 # display = Display(visible=1, size=(800, 600))
-display.start()
+#display.start()
 
 user = os.environ["USER"]
 password = os.environ["PASSWORD"]
