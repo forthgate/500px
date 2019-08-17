@@ -60,7 +60,7 @@ def main ():
         while True:
                         i=0
                         for i in range(0,20):
-                                ### Go to next photo. After first like xpath of will be changed ###
+                                ### Go to next photo. After first like xpath will be changed ###
                                 if i >= 1:
                                     next=driver.find_element_by_xpath(xpf)
                                 else:
