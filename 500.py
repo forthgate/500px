@@ -27,6 +27,8 @@ options.add_argument('--headless')
 options.add_argument('--disable-gpu')
 options.add_argument('--disable-dev-shm-usage')
 options.add_argument('--no-sandbox')
+options.add_argument('--disable-software-rasterizer')
+options.binary_location="./webdriver/headless_shell"
 driver = webdriver.Chrome (executable_path='./webdriver/chromedriver', options=options)
 
 
