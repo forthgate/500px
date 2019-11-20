@@ -13,11 +13,11 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 import time
 import os
-# from pyvirtualdisplay import Display
+#from pyvirtualdisplay import Display
 #
 #
 #
-# display = Display(visible=1, size=(800, 600))
+#display = Display(visible=1, size=(800, 600))
 #display.start()
 
 user = os.environ["USER"]
@@ -31,8 +31,9 @@ driver = webdriver.Chrome (executable_path='./webdriver/chromedriver', options=o
 
 
 def login ():
-        driver.get('https://500px.com/login')
-        email = driver.find_element_by_xpath('//*[@id="email"]')
+        driver.get('https://web.500px.com/login')
+        time.sleep (3)
+        email = driver.find_element_by_xpath('//*[@id="emailOrUsername"]')
         email.send_keys(str(user))
         passwd = driver.find_element_by_xpath('//*[@id="password"]')
         passwd.send_keys(str(password))
