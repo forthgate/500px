@@ -7,7 +7,7 @@ Script for 500px account promotion (auto-like)
   This script helps to promote account and allow like over 16200 photos per day on 500px.com. When script will be launched it will open page with fresh photos and start like every picture. When 20 pics will be liked, page will refresh and script start from beginning. For statistic i put counter and url for every liked pic. Script contains infinite loop, so keep in mind it
 
 ## Dependencies:
-On your OS should be installed Chromium/Chrome ==>71.0.0 and python3-pip package<br>
+On your OS should be installed latest version Chromium/Chrome  and python3-pip package<br>
 
 ## How to start:
 At first you should to add two variables - $USER and $PASSWORD which will be used for authorization:
@@ -15,8 +15,8 @@ At first you should to add two variables - $USER and $PASSWORD which will be use
 export USER='USER'
 export PASSWORD='YOUR_PASSWORD'
 ```
-Then you should to install requrement modules
-`pip install -r requrirements.txt`
+Then you have to install requirement modules
+`pip install -r requirements.txt`
 
 After this you can launch the script:
 
